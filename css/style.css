@@ -137,11 +137,19 @@ section {
 .horse-section {
     position: relative;
     background-color: #f0d9b5;
-    width: 100%;
-    max-width: 1400px;
+    width: 100vw;
+    /* растягиваем на всю ширину окна */
     height: 400px;
-    margin: 0 auto;
     overflow: visible;
+    /* margin: 0 auto; — убираем */
+}
+
+/* Внутренний контейнер для ограничения ширины */
+.horse-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
 }
 
 .horse-svg {
