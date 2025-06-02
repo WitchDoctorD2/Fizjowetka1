@@ -25,25 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
         ring.style.setProperty("--x", `50%`);
         ring.style.setProperty("--y", `50%`);
     });
-});
 
-document.querySelectorAll('.toggle-description').forEach(button => {
-    button.addEventListener('click', () => {
-      const descId = button.getAttribute('aria-controls');
-      const desc = document.getElementById(descId);
-      const expanded = button.getAttribute('aria-expanded') === 'true';
-  
-      // Скрываем все открытые описания (если хочешь, чтобы только одно было открыто)
-      document.querySelectorAll('.procedure-description').forEach(d => {
-        if (d !== desc) d.hidden = true;
-      });
-      document.querySelectorAll('.toggle-description').forEach(btn => {
-        if (btn !== button) btn.setAttribute('aria-expanded', 'false');
-      });
-  
-      // Переключаем выбранное описание
-      desc.hidden = expanded;
-      button.setAttribute('aria-expanded', !expanded);
+    // === Карточки процедур ===
+    document.querySelectorAll('.toggle-description').forEach(button => {
+        button.addEventListener('click', () => {
+            const descId = button.getAttribute('aria-controls');
+            const desc = document.getElementById(descId);
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            // Скрываем все другие описания (если нужно одиночное открытие)
+            document.querySelectorAll('.procedure-description').forEach(d => {
+                if (d.id !== descId) d.hidden = true;
+            });
+            document.querySelectorAll('.toggle-description').forEach(btn => {
+                if (btn !== button) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = 'Czytaj więcej';
+                }
+            });
+
+            // Переключаем видимость текущего
+            desc.hidden = isExpanded;
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            button.textContent = isExpanded ? 'Czytaj więcej' : 'Zwiń';
+        });
     });
-  });
-  
+});
