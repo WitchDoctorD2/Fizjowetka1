@@ -1,0 +1,355 @@
+/* === Сброс и базовые стили === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding-top: 100px;
+    background-color: #f9def2;
+}
+
+/* === Хедер и навигация === */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+h2 {
+    text-align: center;
+}
+
+.szapka {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #CDB4B3, #CBCEE1, #e6d399);
+    position: relative;
+}
+
+.branding {
+    display: grid;
+    grid-template-columns: 70px 1fr 50px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-glow {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.glow-ring {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.6), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.logo-glow:hover .glow-ring {
+    opacity: 1;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ca8383;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .nav-menu ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* === Основной контент === */
+section {
+    padding: 4rem 1rem;
+}
+
+/* === Секция с лошадью === */
+.horse-section {
+    position: relative;
+    background-color: #f0d9b5;
+    width: 100%;
+    max-width: 1400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.horse-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* === Стили процедур === */
+.procedures {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.procedure-card {
+    border: 1px solid #b0a8a8;
+    border-radius: 13px;
+    background: #f7f1f1;
+    box-shadow: 0 2px 5px rgba(180, 170, 170, 0.2);
+    transition: box-shadow 0.3s ease;
+    padding: 1rem;
+    cursor: default;
+}
+
+.procedure-card:hover {
+    box-shadow: 0 6px 15px rgba(180, 170, 170, 0.4);
+}
+
+.procedure-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.procedure-header h3 {
+    font-size: 1.4rem;
+    color: #4a3f3f;
+    flex-grow: 1;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #705858;
+    min-width: 80px;
+    text-align: right;
+}
+
+.toggle-description {
+    background-color: #c3b4b4;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    color: #4a3f3f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-description:hover,
+.toggle-description:focus {
+    background-color: #a89999;
+    outline: none;
+}
+
+.procedure-description {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #5c4e4e;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.book-btn {
+    margin-top: 0.75rem;
+    background-color: #8a7a7a;
+    color: #f7f1f1;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover,
+.book-btn:focus {
+    background-color: #6f5d5d;
+    outline: none;
+}
+
+/* === Стили пациентов === */
+.patients {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #dd8080;
+}
+
+.card img,
+.card video {
+    width: 100%;
+    display: block;
+}
+
+.card-description {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* === О нас === */
+.about {
+    background: #d08484;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* === Анимации === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .branding {
+        grid-template-columns: 50px 1fr auto;
+        gap: 0.5rem;
+    }
+
+    .site-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        font-size: 1.8rem;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .procedures {
+        grid-template-columns: 1fr !important;
+        display: grid;
+    }
+
+    .procedure-card {
+        padding: 0.75rem;
+    }
+
+    .procedure-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1rem;
+        min-width: auto;
+    }
+
+    .patients {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        font-size: 0.95rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .horse-section {
+        height: auto;
+        min-height: 250px;
+    }
+
+    .site-title,
+    h2 {
+        text-align: center;
+    }
+
+    .card img,
+    .card video {
+        max-height: 300px;
+        object-fit: cover;
+    }
+}

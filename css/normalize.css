@@ -1,0 +1,60 @@
+/* Сброс box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+/* Убираем отступы у списков с классами */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Убираем внешние отступы у body и некоторых элементов с классами */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/* Упрощаем поведение изображений */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Наследуем шрифт */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+/* Базовая настройка html */
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Базовая настройка body */
+body {
+    min-height: 100%;
+    line-height: 1.5;
+}
+
+/* Поддержка reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

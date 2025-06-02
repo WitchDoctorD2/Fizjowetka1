@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Визитка</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="szapka">
+            <div class="branding">
+                <div class="logo-glow">
+                    <img src="images/logo.jpg" alt="Логотип" class="header-logo" />
+                    <div class="glow-ring"></div>
+                </div>
+                <h1 class="site-title">FIZJOWETKA</h1>
+                <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#procedures">Описание процедуры</a></li>
+                    <li><a href="#patients">Мои пациенты</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <section class="horse-section">
+            <img src="/images/horse.svg" alt="Лошадь" class="horse-svg" />
+        </section>
+
+        <section id="procedures">
+            <div class="container">
+                <h2>Процедуры</h2>
+                <div class="procedures">
+                    <div class="procedure-card">
+                        <div class="procedure-header">
+                            <h3>Процедура 1</h3>
+                            <span class="price">1000 ₽</span>
+                            <button class="toggle-description" aria-expanded="false" aria-controls="desc1">Подробнее</button>
+                        </div>
+                        <div class="procedure-description" id="desc1" hidden>
+                            <p>Безопасная и эффективная процедура для восстановления здоровья вашего питомца.</p>
+                            <button class="book-btn">Записаться</button>
+                        </div>
+                    </div>
+        
+                    <div class="procedure-card">
+                        <div class="procedure-header">
+                            <h3>Процедура 2</h3>
+                            <span class="price">1500 ₽</span>
+                            <button class="toggle-description" aria-expanded="false" aria-controls="desc2">Подробнее</button>
+                        </div>
+                        <div class="procedure-description" id="desc2" hidden>
+                            <p>Профессиональная процедура для улучшения самочувствия и подвижности.</p>
+                            <button class="book-btn">Записаться</button>
+                        </div>
+                    </div>
+        
+                    <div class="procedure-card">
+                        <div class="procedure-header">
+                            <h3>Процедура 3</h3>
+                            <span class="price">2000 ₽</span>
+                            <button class="toggle-description" aria-expanded="false" aria-controls="desc3">Подробнее</button>
+                        </div>
+                        <div class="procedure-description" id="desc3" hidden>
+                            <p>Комплексный уход с применением современных методик физиотерапии.</p>
+                            <button class="book-btn">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+
+        <section id="patients">
+            <div class="container">
+                <h2>Мои пациенты</h2>
+                <div class="patients">
+                    <div class="card">
+                        <img src="/images/highFox.jpg" alt="Пациент 1" />
+                        <div class="card-description">Описание пациента 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="/images/cat.jpg" alt="Пациент 1" />
+                        <div class="card-description">Описание пациента 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="/images/coolDog.jpg" alt="Пациент 1" />
+                        <div class="card-description">Описание пациента 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="/images/prettyBaby.jpg" alt="Пациент 1" />
+                        <div class="card-description">Описание пациента 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="/images/dogSpa.jpg" alt="Пациент 1" />
+                        <div class="card-description">Описание пациента 1</div>
+                    </div>
+                    <div class="card">
+                        <video controls src="patient2.mp4"></video>
+                        <div class="card-description">Описание пациента 2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container about">
+                <h2>О нас</h2>
+                <p>Мы профессионалы с большим опытом. Наши процедуры эффективны, безопасны и проверены временем.
+                    Выбирая нас, вы выбираете качество и заботу.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
