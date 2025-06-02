@@ -144,17 +144,18 @@ section {
     background-color: #f0d9b5;
     width: 100vw;
     height: 400px;
+    /* фиксированная высота для десктопа */
     overflow: visible;
 }
 
-/* Внутренний контейнер для ограничения ширины */
+/* Внутренний контейнер */
 .horse-section .container {
     max-width: 1400px;
     margin: 0 auto;
-    min-height: 500px;
-    position: relative;
     height: 100%;
-    /* чтобы занять высоту родителя */
+    /* чтобы занять всю высоту родителя */
+    position: relative;
+    /* убрал min-height */
 }
 
 /* SVG с абсолютным позиционированием */
@@ -381,12 +382,11 @@ section {
         height: auto;
         min-height: 250px;
     }
-
+    
     .horse-section .container {
+         height: auto;
         min-height: 250px;
-        /* гарантируем высоту контейнера на мобиле */
-        height: auto;
-    }
+     }
 
     .horse-svg {
         position: absolute;
