@@ -7,16 +7,24 @@
     <title>Визитка</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
-<body>
+<body id="home">
     <header>
         <div class="szapka">
             <div class="branding">
-                <div class="logo-glow">
-                    <img src="images/logo.jpg" alt="Логотип" class="header-logo" />
-                    <div class="glow-ring"></div>
-                </div>
+                <a href="#home" class="logo-link">
+                    <div class="logo-glow">
+                        <img src="images/logo.jpg" alt="Логотип" class="header-logo" />
+                        <div class="glow-ring"></div>
+                    </div>
+                </a>
+                
                 <h1 class="site-title">FIZJOWETKA</h1>
                 <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
             </div>
@@ -26,14 +34,14 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#procedures">Zabiegi i usługi</a></li>
                     <li><a href="#patients">Moi pacjenci</a></li>
-                    <li><a href="#about">О O nas</a></li>
+                    <li><a href="#about">O nas</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="wrapper">
-        <section class="horse-section">
+    <main class="wrapper" >
+        <section class="horse-section" >
             <div class="container">
                 <img src="images/horse.svg" alt="Лошадь" class="horse-svg" />
             </div>
@@ -295,10 +303,25 @@
                 działam z pasją, spokojem i szacunkiem do każdego zwierzęcia.
                 Jeśli chcesz zadbać o zdrowie swojego konia – zapraszam do kontaktu!
                     </p>
-            </div>
+            </div>       
         </section>
     </main>
-
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 FIZJOWETKA</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/yourchannel" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 
