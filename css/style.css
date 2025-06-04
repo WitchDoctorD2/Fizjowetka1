@@ -1,4 +1,7 @@
 /* === Сброс и базовые стили === */
+:root {
+    --font-heading: 'Signika', serif;
+}
 * {
     margin: 0;
     padding: 0;
@@ -31,12 +34,19 @@ header {
 h2 {
     text-align: center;
 }
+.site-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
 
 .szapka {
     max-width: 1600px;
     margin: 0 auto;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #CDB4B3, #CBCEE1, #e6d399);
+    background: linear-gradient(200deg, #fbbebc, #e7d0fe);
     position: relative;
 }
 
@@ -89,7 +99,8 @@ h2 {
 
 .menu-toggle {
     background: none;
-    border: none;
+    border: 2px;
+    border-color: #333;
     font-size: 2rem;
     cursor: pointer;
     justify-self: end;
@@ -101,10 +112,10 @@ h2 {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #ca8383;
+    background: linear-gradient(200deg, #FFB8B5, #EFBCD9);
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    opacity: 1;
 }
 
 .nav-menu.active {
@@ -141,7 +152,7 @@ section {
 /* === Секция с лошадью === */
 .horse-section {
     position: relative;
-    background-color: #f0d9b5;
+    background: linear-gradient(100deg,#dec0fd,#ffb8b5);
     width: 100vw;
     height: 400px;
     /* фиксированная высота для десктопа */
@@ -212,19 +223,19 @@ section {
 }
 
 .toggle-description {
-    background-color: #c3b4b4;
+    background-color: #e7d0fe;
     border: none;
     border-radius: 6px;
     padding: 0.3rem 0.8rem;
     font-size: 0.9rem;
-    color: #dad0d0;
+    color: #000000;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .toggle-description:hover,
 .toggle-description:focus {
-    background-color: #a89999;
+    background-color: #fbbebc;
     outline: none;
 }
 
@@ -266,7 +277,7 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    background: #dd8080;
+    background: #EDBDDE;
 }
 
 .card img,
@@ -282,11 +293,40 @@ section {
 
 /* === О нас === */
 .about {
-    background: #d08484;
+    background: #E1C0F9;
     border-radius: 8px;
     padding: 2rem;
     margin-top: 2rem;
     text-align: center;
+}
+footer {
+    background-color: var(--bg);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--text);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--text);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+    /* например, розовый оттенок */
 }
 
 /* === Анимации === */
@@ -313,7 +353,10 @@ section {
     }
 
     .site-title {
-        font-size: 1.2rem;
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #333;
         text-align: center;
     }
 
