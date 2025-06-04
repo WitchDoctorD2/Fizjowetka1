@@ -277,7 +277,13 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    background: #EDBDDE;
+    background: #ffeeee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img,
@@ -290,7 +296,6 @@ section {
     padding: 0.5rem;
     text-align: center;
 }
-
 /* === О нас === */
 .about {
     background: #E1C0F9;
