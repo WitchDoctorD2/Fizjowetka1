@@ -385,6 +385,8 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
         padding: 1rem;
+        align-items: center;
+        /* Центрируем пункты меню */
     }
 
     section {
